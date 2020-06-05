@@ -1,0 +1,26 @@
+{
+  "name": "gander",
+  "version": "1.0.0",
+  "description": "A glance at new or existing games for users to rate according to preference.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kiananaik/Gander.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kiananaik/Gander/issues"
+  },
+  "homepage": "https://github.com/Kiananaik/Gander#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.17",
+    "nodemon": "^2.0.4"
+  }
+}
