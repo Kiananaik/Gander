@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: rgb(255, 0, 128);
+}
+
+html{
+    height: 100%;
+}
+
+.header{
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    padding: 27px;
+    border-bottom: 3px solid rgb(0, 4, 255);
+    margin-bottom: 20px;
+}
