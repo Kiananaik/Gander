@@ -78,9 +78,9 @@ class Directory extends Component {
 
     applySort = (array) => {//deleted value of array... rememberrrrrrr*****************
         const employees = array;
-        return employees;
+        // return employees;
 
-        // switch (value) {
+        switch (value) {
         //     case "First Name":
         //         employees.sort((a, b) => {
         //             const firstNameA = a.name.first.toLowerCase();
@@ -89,13 +89,13 @@ class Directory extends Component {
         //         })
         //         break;
 
-            // case "original_release_date":
-            //     employees.sort((a, b) => {
-            //         const original_release_dateA = a.original_release_date.toLowerCase();
-            //         const original_release_dateB = b.original_release_date.toLowerCase();
-            //         return (original_release_dateA < original_release_dateB) ? -1 : (original_release_dateA > original_release_dateB) ? 1 : 0;
-            //     })
-            //     break;
+            case "original_release_date":
+                employees.sort((a, b) => {
+                    const original_release_dateA = a.original_release_date.toLowerCase();
+                    const original_release_dateB = b.original_release_date.toLowerCase();
+                    return (original_release_dateA < original_release_dateB) ? -1 : (original_release_dateA > original_release_dateB) ? 1 : 0;
+                })
+                break;
 
         //     case "Phone Number":
         //         employees.sort((a, b) => {
@@ -113,11 +113,11 @@ class Directory extends Component {
         //         })
         //         break;
 
-        //     default:
-        //         break;
-        // }
+            default:
+                break;
+        }
 
-        // return employees;
+        return employees;
     }
 
     render() {
