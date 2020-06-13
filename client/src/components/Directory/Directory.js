@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import EmployeeList from "../EmployeeList/EmployeeList";
 import API from "../../utils/API";
 import "./DirectoryStyle.css";
-import axios from "axios";
 
 class Directory extends Component {
     state = {
@@ -181,20 +180,6 @@ class Directory extends Component {
 
 
 
-axios({
-    url: "https://api-v3.igdb.com/games",
-    method: 'POST',
-    headers: {
-        'Accept': 'application/json',
-        'user-key': '6d69a1e7e9149dc76e1182fd31efdeb2'
-    },
-    data: "search 'Halo';fields name,genres,dlcs,"
-  })
-    .then(response => {
-        console.log(response.data);
-    })
-    .catch(err => {
-        console.error(err);
-    });
+
 
 export default Directory;

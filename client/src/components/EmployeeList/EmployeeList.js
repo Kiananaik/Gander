@@ -3,16 +3,16 @@ import React from "react";
 import "./EmployeeListStyle.css";
 
 const EmployeeList = props => {
-    const { cell, email, name, picture, login } = props.employee;
+    const { name, image, description } = props.employee;
 
     return(
     <div className="row">
-        <img className="col-sm-2" src={picture.large} alt={name.first + " " + name.last}></img>
+        <img className="col-sm-2" src={image.medium_url} alt={name}></img>
         <div className="col-sm-10">
-            <p>Name: <span>{name.first} {name.last}</span></p>
-            <p>Email: <span>{email}</span></p>
-            <p>Phone Number: <span>{cell}</span></p>
-            <p>Username: <span>{login.username}</span></p>
+            <p>Name: <span>{name}</span></p>
+            <p>Intended Release: <span>{original_release_date}</span></p>
+            <p>Summary: <span>{description}</span></p>
+            {/* <p>Username: <span>{login.username}</span></p> */}
         </div>
     </div>
     )
