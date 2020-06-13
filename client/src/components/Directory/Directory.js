@@ -69,7 +69,7 @@ class Directory extends Component {
             employee.name.includes(value) ||
             (employee.name).includes(value) ||
             employee.original_release_date.includes(value) ||
-            employee.description.includes(value)
+            employee.deck.includes(value)
             // employee.login.username.includes(value)
         );
 
@@ -99,8 +99,8 @@ class Directory extends Component {
 
         //     case "Phone Number":
         //         employees.sort((a, b) => {
-        //             const numberA = a.description.toLowerCase();
-        //             const numberB = b.description.toLowerCase();
+        //             const numberA = a.deck.toLowerCase();
+        //             const numberB = b.deck.toLowerCase();
         //             return (numberA < numberB) ? -1 : (numberA > numberB) ? 1 : 0;
         //         })
         //         break;
