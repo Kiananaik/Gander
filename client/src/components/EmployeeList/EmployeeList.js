@@ -3,7 +3,7 @@ import React from "react";
 import "./EmployeeListStyle.css";
 
 const EmployeeList = props => {
-    const { name, image, description } = props.employee;
+    const { name, image, description, original_release_date } = props.employee;
 
     return(
     <div className="row">
