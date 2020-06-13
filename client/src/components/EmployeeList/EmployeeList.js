@@ -12,7 +12,6 @@ const EmployeeList = props => {
             <p>Name: <span>{name}</span></p>
             <p>Intended Release: <span>{original_release_date}</span></p>
             <p>Summary: <span>{description}</span></p>
-            {/* <p>Username: <span>{login.username}</span></p> */}
         </div>
     </div>
     )
