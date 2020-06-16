@@ -134,7 +134,7 @@ class Directory extends Component {
 
         return(
             <div className="container">
-                <input className="input" placeholder="Search employees" name="searchTerm" onChange={this.handleInputChange}></input>
+                <input className="input" placeholder="Search Games" name="searchTerm" onChange={this.handleInputChange}></input>
                 <div className="dropdown">
                     <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Sort By
