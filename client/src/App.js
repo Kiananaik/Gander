@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Directory from "./components/Directory/Directory";
-import NavBar from "./components/NavBar/NavBar";
+// import NavBar from "./components/NavBar/NavBar";
 import logo from "./ganderLogo.svg";
 import "./App.css";
 
@@ -9,7 +9,10 @@ function App() {
     <div className="App">
       <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <NavBar></NavBar>
+        {/* <NavBar></NavBar> */}
+        <div className="header">
+            Let's Take a Gander at some Games...
+        </div>
       </div>
       <Directory></Directory>
     </div>
