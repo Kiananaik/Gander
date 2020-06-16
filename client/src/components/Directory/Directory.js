@@ -88,7 +88,7 @@ class Directory extends Component {
                 })
                 break;
 
-            case "Release":
+            case "Release Date":
                 employees.sort((a, b) => {
                     const original_release_dateA = a.original_release_date.toLowerCase();
                     const original_release_dateB = b.original_release_date.toLowerCase();
@@ -96,7 +96,7 @@ class Directory extends Component {
                 })
                 break;
 
-            case "Deck":
+            case "Descriptive Word":
                 employees.sort((a, b) => {
                     const deckA = a.deck.toLowerCase();
                     const deckB = b.deck.toLowerCase();
@@ -143,8 +143,8 @@ class Directory extends Component {
                     }
                     <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <option className="dropdown-item" name="sort" value="Name" onClick={this.handleSortChange}>Name</option>
-                        <option className="dropdown-item" name="sort" value="Release" onClick={this.handleSortChange}>Release Date</option>
-                        <option className="dropdown-item" name="sort" value="Deck" onClick={this.handleSortChange}>Descriptive Word</option>
+                        <option className="dropdown-item" name="sort" value="Release Date" onClick={this.handleSortChange}>Release Date</option>
+                        <option className="dropdown-item" name="sort" value="Descriptive Word" onClick={this.handleSortChange}>Descriptive Word</option>
                         <option className="dropdown-item" name="sort" value="" onClick={this.handleSortChange}>None</option>
                     </div>
                 </div>
