@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Directory from "./components/Directory/Directory";
 import NavBar from "./components/NavBar/NavBar";
-import logo from "./logo.svg";
+import logo from "./ganderLogo.svg";
 import "./App.css";
 
 function App() {
