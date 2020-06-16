@@ -75,7 +75,7 @@ class Directory extends Component {
         return employees;
     }
 
-    applySort = (array) => {//deleted value of array... rememberrrrrrr*****************
+    applySort = (array, value) => {//deleted value of array... rememberrrrrrr*****************
         const employees = array;
         // return employees;
 
