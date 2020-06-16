@@ -70,7 +70,6 @@ class Directory extends Component {
             (employee.name).includes(value) ||
             employee.original_release_date.includes(value) ||
             employee.deck.includes(value)
-            // employee.login.username.includes(value)
         );
 
         return employees;
@@ -78,46 +77,38 @@ class Directory extends Component {
 
     applySort = (array) => {//deleted value of array... rememberrrrrrr*****************
         const employees = array;
-        return employees;
-
-        // switch (value) {
-        //     case "First Name":
-        //         employees.sort((a, b) => {
-        //             const firstNameA = a.name.first.toLowerCase();
-        //             const firstNameB = b.name.first.toLowerCase();
-        //             return (firstNameA < firstNameB) ? -1 : (firstNameA > firstNameB) ? 1 : 0;
-        //         })
-        //         break;
-
-            // case "original_release_date":
-            //     employees.sort((a, b) => {
-            //         const original_release_dateA = a.original_release_date.toLowerCase();
-            //         const original_release_dateB = b.original_release_date.toLowerCase();
-            //         return (original_release_dateA < original_release_dateB) ? -1 : (original_release_dateA > original_release_dateB) ? 1 : 0;
-            //     })
-            //     break;
-
-        //     case "Phone Number":
-        //         employees.sort((a, b) => {
-        //             const numberA = a.deck.toLowerCase();
-        //             const numberB = b.deck.toLowerCase();
-        //             return (numberA < numberB) ? -1 : (numberA > numberB) ? 1 : 0;
-        //         })
-        //         break;
-
-        //     case "Username":
-        //         employees.sort((a, b) => {
-        //             const usernameA = a.login.username.toLowerCase();
-        //             const usernameB = b.login.username.toLowerCase();
-        //             return (usernameA < usernameB) ? -1 : (usernameA > usernameB) ? 1 : 0;
-        //         })
-        //         break;
-
-        //     default:
-        //         break;
-        // }
-
         // return employees;
+
+        switch (value) {
+            case "Name":
+                employees.sort((a, b) => {
+                    const nameA = a.name.toLowerCase();
+                    const nameB = b.name.toLowerCase();
+                    return (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
+                })
+                break;
+
+            case "Release":
+                employees.sort((a, b) => {
+                    const original_release_dateA = a.original_release_date.toLowerCase();
+                    const original_release_dateB = b.original_release_date.toLowerCase();
+                    return (original_release_dateA < original_release_dateB) ? -1 : (original_release_dateA > original_release_dateB) ? 1 : 0;
+                })
+                break;
+
+            case "Deck":
+                employees.sort((a, b) => {
+                    const deckA = a.deck.toLowerCase();
+                    const deckB = b.deck.toLowerCase();
+                    return (deckA < deckB) ? -1 : (deckA > deckB) ? 1 : 0; 
+                })
+                break;
+
+            default:
+                break;
+        }
+
+        return employees;
     }
 
     render() {
@@ -135,9 +126,10 @@ class Directory extends Component {
         return(
             <div className="container">
                 <input className="input" placeholder="Search Games" name="searchTerm" onChange={this.handleInputChange}></input>
-                <div className="dropdown">
+                <div className="dropdown"> 
+                {/* !!!!!!! THIS IS DA BUTTON TO FUCK WIT !!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
                     <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Sort By
+                        Sort By...
                     </button>
                     {
                         this.state.sort.length
@@ -150,11 +142,9 @@ class Directory extends Component {
                         null
                     }
                     <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        {/* <option className="dropdown-item" name="sort" value="First Name" onClick={this.handleSortChange}>First Name</option>
-                        <option className="dropdown-item" name="sort" value="Last Name" onClick={this.handleSortChange}>Last Name</option> */}
-                        <option className="dropdown-item" name="sort" value="original_release_date" onClick={this.handleSortChange}>original_release_date</option>
-                        {/* <option className="dropdown-item" name="sort" value="Phone Number" onClick={this.handleSortChange}>Phone Number</option>
-                        <option className="dropdown-item" name="sort" value="Username" onClick={this.handleSortChange}>Username</option> */}
+                        <option className="dropdown-item" name="sort" value="Name" onClick={this.handleSortChange}>Name</option>
+                        <option className="dropdown-item" name="sort" value="Release" onClick={this.handleSortChange}>Release Date</option>
+                        <option className="dropdown-item" name="sort" value="Deck" onClick={this.handleSortChange}>Descriptive Word</option>
                         <option className="dropdown-item" name="sort" value="" onClick={this.handleSortChange}>None</option>
                     </div>
                 </div>
