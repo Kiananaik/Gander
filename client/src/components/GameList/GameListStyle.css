@@ -6,58 +6,41 @@ span{
     font-weight: normal;
 }
 
-.row {
+.row{
     margin-bottom: 20px;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-left: 20%;
-    flex: 1;
-    order: 1;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    margin-top: 7%;
-    margin-bottom: 15%;
-    text-align: left;
 }
 
 /* .gameBox{
     align-items: left;
 } */
 
-/* .one {
-    
-} */
-
-/* .two {
-    
-} */
-
-.output {
+.one {
     flex: 1;
     order: 1;
     border-radius: 0%;
     padding: 5px;
+}
+
+.two {
+    flex: 1;
+    order: 2;
+    margin-top: 5%;
+}
+
+#output{
     padding: 15px;
     margin: 5px;
 }
 /* below is whats in castbox */
-/* .weekBoxes {
-    
-  } */
-
-.art {
-    flex: 1;
-    order: 2;
-    margin-top: 5%;
+.weekBoxes {
     display: -ms-flexbox;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+  }
+
+.box {
     justify-content: center;
     text-align: center;
     color: white;

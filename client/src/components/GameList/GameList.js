@@ -9,7 +9,7 @@ const GameList = props => {
     <div className="row">
 
             {/* original classname used col-sm-10  ----------- but will be output, and one */}
-            <div className="output">
+            <div className="col-sm-10">
 
                 <p>Name: <span>{name}</span></p>
                 <p>Intended Release: <span>{original_release_date}</span></p>
@@ -17,8 +17,8 @@ const GameList = props => {
 
             </div>
 
-            <img className="art" src={image.medium_url} alt={name}></img>
-            {/* original class name used col-sm-2  ----------- but will be castbox (art), and two */}
+            <img className="col-sm-2" src={image.medium_url} alt={name}></img>
+            {/* original class name used col-sm-2  ----------- but will be castbox, and two */}
 
     </div>
     )
