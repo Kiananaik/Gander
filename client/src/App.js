@@ -10,12 +10,16 @@ function App() {
 
       <div className="App-header">
 
-        {/* <NavBar></NavBar> */}
         <div className="header">
+
         Let's Take a <img src={logo} className="App-logo" alt="logo" /> at some Games...
+
         </div>
+
       </div>
+
       <Directory></Directory>
+      
     </div>
   );
 }

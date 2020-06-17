@@ -7,11 +7,18 @@ const EmployeeList = props => {
 
     return(
     <div className="row">
-        <img className="col-sm-2" src={image.medium_url} alt={name}></img>
-        <div className="col-sm-10">
-            <p>Name: <span>{name}</span></p>
-            <p>Intended Release: <span>{original_release_date}</span></p>
-            <p>Summary: <span>{deck}</span></p>
+        <div className="gameBox">
+
+            <div className="col-sm-10">
+
+                <p>Name: <span>{name}</span></p>
+                <p>Intended Release: <span>{original_release_date}</span></p>
+                <p>Summary: <span>{deck}</span></p>
+
+            </div>
+
+            <img className="col-sm-2" src={image.medium_url} alt={name}></img>
+
         </div>
     </div>
     )
