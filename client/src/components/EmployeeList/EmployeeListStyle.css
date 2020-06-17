@@ -9,3 +9,7 @@ span{
 .row{
     margin-bottom: 20px;
 }
+
+.gameBox{
+    align-items: left;
+}
