@@ -3,6 +3,8 @@ import EmployeeList from "../EmployeeList/EmployeeList";
 import API from "../../utils/API";
 import "./DirectoryStyle.css";
 
+
+
 class Directory extends Component {
     state = {
         results: [],
