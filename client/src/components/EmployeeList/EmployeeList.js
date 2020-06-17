@@ -7,7 +7,6 @@ const EmployeeList = props => {
 
     return(
     <div className="row">
-        <div className="gameBox">
 
             <div className="col-sm-10">
 
@@ -19,7 +18,6 @@ const EmployeeList = props => {
 
             <img className="col-sm-2" src={image.medium_url} alt={name}></img>
 
-        </div>
     </div>
     )
 }
