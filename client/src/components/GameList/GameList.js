@@ -1,9 +1,9 @@
   
 import React from "react";
-import "./EmployeeListStyle.css";
+import "./GameListStyle.css";
 
-const EmployeeList = props => {
-    const { name, image, deck, original_release_date } = props.employee;
+const GameList = props => {
+    const { name, image, deck, original_release_date } = props.game;
 
     return(
     <div className="row">
@@ -22,4 +22,4 @@ const EmployeeList = props => {
     )
 }
 
-export default EmployeeList;
+export default GameList;

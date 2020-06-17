@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import EmployeeList from "../EmployeeList/EmployeeList";
+import GameList from "../GameList/GameList";
 import API from "../../utils/API";
 import "./DirectoryStyle.css";
 
@@ -16,11 +16,11 @@ class Directory extends Component {
     counter = 0;
 
     componentDidMount = () => {
-        this.displayEmployees();
+        this.displayGames();
     }
 
-    displayEmployees = () => {
-        API.getEmployees().then(results => {
+    displayGames = () => {
+        API.getGames().then(results => {
             this.setState({
                 results: results.data.results,
                 queryResults: results.data.results
@@ -31,16 +31,13 @@ class Directory extends Component {
     handleInputChange = event => {
         const { name, value } = event.target;
         let searchedArray;
-
         if(this.state.sort.length){
             searchedArray = this.applySort([...this.state.results], this.state.sort);
         }
         else{
             searchedArray = [...this.state.results];
         }
-
         const results = this.applySearch(searchedArray, value.toLowerCase());
-
         this.setState({
             queryResults: results,
             [name]: value.toLowerCase()
@@ -50,16 +47,13 @@ class Directory extends Component {
     handleSortChange = event => {
         const { value } = event.target;
         let sortedArray;
-
         if(this.state.searchTerm.length){
             sortedArray = this.applySearch([...this.state.results], this.state.searchTerm);
         }
         else{
             sortedArray = [...this.state.results];
         }
-
         const results = this.applySort(sortedArray, value);
-
         this.setState({
             queryResults: results,
             sort: value
@@ -67,23 +61,23 @@ class Directory extends Component {
     }
 
     applySearch = (array, value) => {
-        const employees = array.filter(employee =>
-            employee.name.includes(value) ||
-            (employee.name).includes(value) ||
-            employee.original_release_date.includes(value) ||
-            employee.deck.includes(value)
+        const games = array.filter(game =>
+            game.name.includes(value) ||
+            (game.name).includes(value) ||
+            game.original_release_date.includes(value) ||
+            game.deck.includes(value)
         );
 
-        return employees;
+        return games;
     }
 
-    applySort = (array, value) => {//deleted value of array... rememberrrrrrr*****************
-        const employees = array;
-        // return employees;
+    applySort = (array, value) => {//undeleted value of array... rememberrrrrrr*****************
+        const games = array;
+        // return games;
 
         switch (value) {
             case "Name":
-                employees.sort((a, b) => {
+                games.sort((a, b) => {
                     const nameA = a.name.toLowerCase();
                     const nameB = b.name.toLowerCase();
                     return (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
@@ -91,7 +85,7 @@ class Directory extends Component {
                 break;
 
             case "Release Date":
-                employees.sort((a, b) => {
+                games.sort((a, b) => {
                     const original_release_dateA = a.original_release_date.toLowerCase();
                     const original_release_dateB = b.original_release_date.toLowerCase();
                     return (original_release_dateA < original_release_dateB) ? -1 : (original_release_dateA > original_release_dateB) ? 1 : 0;
@@ -99,7 +93,7 @@ class Directory extends Component {
                 break;
 
             case "Descriptive Word":
-                employees.sort((a, b) => {
+                games.sort((a, b) => {
                     const deckA = a.deck.toLowerCase();
                     const deckB = b.deck.toLowerCase();
                     return (deckA < deckB) ? -1 : (deckA > deckB) ? 1 : 0; 
@@ -110,7 +104,7 @@ class Directory extends Component {
                 break;
         }
 
-        return employees;
+        return games;
     }
 
     render() {
@@ -151,8 +145,8 @@ class Directory extends Component {
                     </div>
                 </div>
                 {
-                    resultsArray.map(employee => 
-                        <EmployeeList employee={employee} key={this.counter++}></EmployeeList>
+                    resultsArray.map(game => 
+                        <GameList game={game} key={this.counter++}></GameList>
                     )
                 }
             </div>

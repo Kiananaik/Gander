@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default {
-    getEmployees: () => {
+    getGames: () => {
         return axios.get("https://cors-anywhere.herokuapp.com/https://www.giantbomb.com/api/games/?api_key=fd314fc0e15cfdba950d3f5c330e70ba2f464953&format=json&filter=expected_release_year:2020,platform:94&resources=games");
     }
 }
